@@ -31,12 +31,12 @@ guessBtn.addEventListener('click', function(){
     console.log(guess);
     // Validate input
     if(isNaN(guess) || guess < min || guess > max){
-      setMessage(`Please enter a number between ${min} and ${max}`);
+      setMessage(`Please enter a number between ${min} and ${max}`, 'red');
     }
 });
 
 // Set message
-function setMessage(msg){
-  message.style.color = 'red';
+function setMessage(msg, color){
+  message.style.color = color;
   message.textContent = msg;
 }
